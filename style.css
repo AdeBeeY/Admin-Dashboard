@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+}
+
+#sidebar {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  display: grid;
+  grid-template-rows: 70px 300px 100px;
+}
+
+#sidebar .section  > div {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+}
+
+#container-right {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-rows: 200px 1fr;
+}
+
+#header {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  border: 1px solid red;
+}
+
+.header-top {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid blue;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-top .top-left {
+  display: grid;
+  grid-template-columns: 15px 1fr;
+  border: 1px solid green;
+  align-items: center;
+}
+
+.header-top .top-right {
+  display: grid;
+  grid-template-columns: 15px 25px 1fr;
+  border: 1px solid green;
+  align-items: center;
+  justify-self: end;
+}
+
+.header-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.header-bottom .bottom-left {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  align-self: center;
+  border: 1px solid purple;
+}
+
+.header-bottom .bottom-right {
+  display: grid;
+  grid-template-columns: repeat(3, 55px);
+  column-gap: 15px;
+  justify-self: end;
+}
+
+#main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  background-color: rgb(231, 231, 231);
+}
+
+.main-1 .projects-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.projects-container .project-box {
+  display: grid;
+  grid-template-rows: 100px 50px;
+  background-color: white;
+  margin: 10px;
+  border-left: 5px solid orange;
+  padding: 20px 15px 15px 12px;
+}
+
+.project-box .icons {
+  display: grid;
+  grid-template-columns: repeat(3, 20px);
+  justify-content: end;
+  column-gap: 10px;
+}
+
+.main-2 {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.main-2-top .announce-cont {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.announce-cont .announce-box {
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+}
+
+.announce-box p {
+  font-size: 10px;
+  line-height: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(205, 205, 205);
+}
+
+.main-2-bottom .trend-container {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  background-color: white;
+}
+
+.trend-container .trend {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+}
