@@ -4,34 +4,74 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  height: 100vh;
+}
+
 #container {
   display: grid;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: auto-fit 1fr;
+  background-color: #d1d5db;
+  width: 80%;
+  margin: 0 auto;
+  height: 100vh;
 }
 
 #sidebar {
   grid-row: 1 / 2;
   grid-column: 1 / 2;
   display: grid;
-  grid-template-rows: 70px 300px 100px;
+  grid-template-rows: 60px 220px 130px;
+  align-items: center;
+  background-color: #0ea5e9;
+  color: white;
+  row-gap: 50px;
 }
 
 #sidebar .section  > div {
   display: grid;
   grid-template-columns: 40px 1fr;
+  font-size: 12px;
+  padding: 3px 0;
+  max-height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+#sidebar .section  > div:hover {
+  color: #0ea5e9;
+  background-color: darkorange;
+}
+
+.section > div > div:first-child {
+  justify-self: center;
+}
+
+#sidebar .section  > div > div:nth-child(2) {
+  font-size: 1.5vw;
+  font-weight: 600;
+  padding-right: 10px;
+}
+.section img {
+  height: 2.5vh;
+  width: 2.5vw;
 }
 
 #container-right {
   grid-row: 1 / 2;
   grid-column: 2 / 3;
   display: grid;
-  grid-template-rows: 200px 1fr;
+  grid-template-rows: repeat(auto-fit, 1fr);
+  height: 100vh;
 }
 
 #header {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   border: 1px solid red;
+  height: fit-content;
 }
 
 .header-top {
@@ -81,16 +121,19 @@
   display: grid;
   grid-template-columns: 3fr 1fr;
   background-color: rgb(231, 231, 231);
+  height: 100%;
+  border: 2px solid darkorange;
 }
 
 .main-1 .projects-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  height: 50%;
 }
 
 .projects-container .project-box {
   display: grid;
-  grid-template-rows: 100px 50px;
+  grid-template-rows: 70px 20px;
   background-color: white;
   margin: 10px;
   border-left: 5px solid orange;
